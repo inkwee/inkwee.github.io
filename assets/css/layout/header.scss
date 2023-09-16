@@ -1,0 +1,31 @@
+.header {
+  height: 90px;
+  position: sticky;
+  top: 0;
+  border-bottom: var(--hr-color) 1px solid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--column-gap);
+  align-items: center;
+  justify-items: start;
+}
+
+
+// заголовок с подменю в каком-нибудь разделе
+.header-sub {
+  position: relative;
+  grid-template-columns: 1fr 1fr;
+}
+
+.header-sub-app {
+  display: flex;
+  align-items: center;
+  gap: var(--column-gap);
+}
+
+.header-sub-menu {
+  display: flex;
+  gap: var(--column-gap);
+  justify-self: end;
+}

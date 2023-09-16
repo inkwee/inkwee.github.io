@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html
+    lang='{{ default .Site.Language.Lang .Site.LanguageCode  }}'
+    dir='{{ default "ltr" .Site.Language.LanguageDirection }}'>
+<head>
+  {{ partial "_default/head" . }}
+</head>
+
+<body>
+  {{ partial "_default/header" . }}
+  {{ block "main" . }}
+  {{ end }}
+  {{ partial "_default/footer" . }}
+</body>
+</html>

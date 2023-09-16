@@ -1,0 +1,13 @@
+baseURL: 'http://example.org/'
+title: 'inkwee'
+enableRobotsTXT: true
+defaultContentLanguage: 'ru'
+
+languages:
+  ru:
+    languageName: Русский
+    weight: 1
+
+params:
+  BrandName: inkwee
+  Email: support@inkwee.com

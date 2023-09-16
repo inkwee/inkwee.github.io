@@ -1,0 +1,29 @@
+{{ define "main" }}
+<div style="text-align: center;margin: 60px auto;max-width: 890px">
+  <h1 class="h2 eye">Changelog</h1>
+
+  <p class="eye">
+    Follow this page to keep updated with the latest template changes.
+  </p>
+</div>
+
+<div class="divider"></div>
+
+<div class="container">
+  {{ range .Pages }}
+  <article class="changelog eye">
+    <p>
+      <span class="badge badge-secondary">{{ .Params.version }}</span>
+    </p>
+
+    <h3 class="mb-1">
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h3>
+
+    <p>{{ .Summary }}</p>
+
+    <p class="small muted mb-0">{{ .Date.Format "January 2, 2006" }}</p>
+  </article>
+  {{ end }}
+</div>
+{{ end }}

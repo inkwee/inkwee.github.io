@@ -1,0 +1,23 @@
+.faq-item-header {
+  cursor: pointer;
+  border-top: 1px solid var(--hr-color);
+  padding-top: var(--block-gap);
+  padding-bottom: var(--block-gap);
+
+  h2 {
+    margin-bottom: 0;
+  }
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+.faq-item-body {
+  padding-bottom: var(--block-gap);
+  max-width: 55%;
+
+  & *:last-child {
+    margin-bottom: 0!important;
+  }
+}

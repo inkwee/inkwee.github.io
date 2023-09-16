@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<meta name="theme-color" content="#212121">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ default .Summary .Description }}">
+
+<title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- https://fonts.google.com/specimen/Lora?category=Serif&sort=popularity&subset=cyrillic&noto.script=Cyrl&preview.text=Привет&preview.text_type=custom -->
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,500&display=swap" rel="stylesheet">
+
+{{- range .Translations }}
+<link
+    rel="alternate"
+    hreflang="{{ default .Language.Lang .Site.LanguageCode }}"
+    href='{{ .Permalink }}'
+>
+{{- end -}}
+
+
+{{- $scripts := resources.Get "scripts/application.js" | resources.Minify | resources.Fingerprint }}
+<script defer src='{{ $scripts.RelPermalink }}'></script>
+
+{{- $styles := resources.Get "css/application.scss" | resources.ToCSS | resources.Minify | resources.Fingerprint }}
+<link
+    rel="preload stylesheet"
+    as="style"
+    href="{{ $styles.RelPermalink }}"
+    integrity="{{ $styles.Data.Integrity }}"
+>

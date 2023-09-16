@@ -1,0 +1,5 @@
+.dark-inverse {
+  @media (prefers-color-scheme: dark) {
+    filter: invert(100%);
+  }
+}

@@ -1,0 +1,11 @@
+.container {
+  margin-left: 2%;
+  margin-right: 2%;
+}
+
+.container-blocked {
+  border-top: 1px solid var(--hr-color);
+  padding-top: var(--block-gap);
+  margin-top: var(--block-gap);
+  margin-bottom: var(--block-gap);
+}

@@ -1,0 +1,38 @@
+<footer class="container footer">
+  <div>
+    <p class="mb-34">
+      <a href="/">
+        <img class="dark-inverse" src="/core/appstore.download.badge.svg" height="40">
+      </a>
+    </p>
+
+    <p class="mb-0 muted">
+      <i>Приложения для ума.</i>
+    </p>
+
+
+    <p class="muted">
+      <i>
+        {{ now.Year }} © {{ .Site.Params.BrandName }}
+        {{- range index site.Menus.footer }}
+        <a href="{{ .URL }}" class="muted">{{ .Title }}</a>
+        {{- end }}
+      </i>
+    </p>
+  </div>
+
+  <div class="footer-center">
+    <p class="muted" style="font-size: 0.8em">
+      Qualified Purchasers receive an Apple Gift Card when they purchase an eligible Mac or iPad at a Qualifying Location. Only one Apple Gift Card per eligible Mac or iPad per Qualified Purchaser. Offer subject to availability. While supplies last. View full terms and conditions of offer here.
+      To access and use all Apple Card features and products available only to Apple Card users, you must add Apple Card to Wallet on an iPhone or iPad that supports and has the latest version of iOS or iPadOS. Apple Card is subject to credit approval, available only for qualifying applicants in the United States, and issued by Goldman Sachs Bank USA, Salt Lake City Branch.
+      If you reside in the U.S. territories, please call Goldman Sachs at 877-255-5923 with questions about Apple Card.
+    </p>
+  </div>
+
+  <div>
+    <p class="subhead2 mb-1">New South Head Rd, Double Bay NSW 2028, New York</p>
+    <p class="subhead2">
+      <a href="/">{{ .Site.Params.Email }}</a>
+    </p>
+  </div>
+</footer>

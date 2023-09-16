@@ -1,0 +1,38 @@
+:root {
+  color-scheme: light dark;
+
+  --font-family: Lora, Sans-Serif;
+  --font-size: 16px;
+  --font-weight: 500;
+  --h-font-wight: 500;
+  --accent-color: #2997ff;
+  --color: #000;
+  --color-muted: #8f8f8f;
+  --inverse-color: #FFF;
+  --inverse-background-color: #000;
+  --hr-color: #000;
+  --background-color: #FFF;
+
+  --column-gap: 16px;
+  --column-gap-lg: 50px;
+  --block-gap: 40px; // пробел между блоками, примерно равен растоянию от края контента до бордера в header
+
+  --p-line-height: 1.2;
+  --h1-line-height: 1;
+  --h2-line-height: 1.1;
+
+  --subhead-size: 1.6rem;
+  --subhead2-size: 1.25rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #2997ff;
+    --color: #FFF;
+    --color-muted: #8f8f8f;
+    --inverse-color: #000;
+    --inverse-background-color: #FFF;
+    --hr-color: #666;
+    --background-color: #000;
+  }
+}

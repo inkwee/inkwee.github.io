@@ -1,0 +1,27 @@
+.footer {
+  padding: var(--block-gap) 0;
+  margin-top: var(--block-gap);
+  border-top: 1px solid var(--hr-color);
+
+  display: grid;
+  align-items: end;
+  grid-column-gap: var(--column-gap-lg);
+  grid-row-gap: var(--column-gap);
+  grid-template-columns: 1fr 1fr 1fr;
+
+  @include media-breakpoint-down(md) {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  @include media-breakpoint-down(sm) {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.footer-center {
+  @include media-breakpoint-down(sm) {
+    order: 100;
+  }
+}
